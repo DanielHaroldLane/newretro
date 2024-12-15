@@ -356,21 +356,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromatic-com/storybook@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "@chromatic-com/storybook@npm:3.2.2"
-  dependencies:
-    chromatic: "npm:^11.15.0"
-    filesize: "npm:^10.0.12"
-    jsonfile: "npm:^6.1.0"
-    react-confetti: "npm:^6.1.0"
-    strip-ansi: "npm:^7.1.0"
-  peerDependencies:
-    storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
-  checksum: 10c0/7b8da1ddb399c804337ff28a28594b548392b7bead52f66615b98e201cdeb4d31184b9e355791ba5d0d8cfdd2bea7d38355ecd0058f26f4790f9a887107bde0f
-  languageName: node
-  linkType: hard
-
 "@emotion/hash@npm:^0.9.0":
   version: 0.9.2
   resolution: "@emotion/hash@npm:0.9.2"
@@ -1732,6 +1717,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-a11y@npm:^8.4.7":
+  version: 8.4.7
+  resolution: "@storybook/addon-a11y@npm:8.4.7"
+  dependencies:
+    "@storybook/addon-highlight": "npm:8.4.7"
+    axe-core: "npm:^4.2.0"
+  peerDependencies:
+    storybook: ^8.4.7
+  checksum: 10c0/d00c65b8e256dfc283774562e0ff3cabbd8b9f3fbe619eb23d2c9951d7b075cf29fe8bdb57d3f05756f649bee8b04dfbed6389e852632b40f748cb6c8bba8896
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-actions@npm:8.4.7":
   version: 8.4.7
   resolution: "@storybook/addon-actions@npm:8.4.7"
@@ -2946,6 +2943,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axe-core@npm:^4.2.0":
+  version: 4.10.2
+  resolution: "axe-core@npm:4.10.2"
+  checksum: 10c0/0e20169077de96946a547fce0df39d9aeebe0077f9d3eeff4896518b96fde857f80b98f0d4279274a7178791744dd5a54bb4f322de45b4f561ffa2586ff9a09d
+  languageName: node
+  linkType: hard
+
 "bail@npm:^2.0.0":
   version: 2.0.2
   resolution: "bail@npm:2.0.2"
@@ -3315,25 +3319,6 @@ __metadata:
   version: 3.0.0
   resolution: "chownr@npm:3.0.0"
   checksum: 10c0/43925b87700f7e3893296c8e9c56cc58f926411cce3a6e5898136daaf08f08b9a8eb76d37d3267e707d0dcc17aed2e2ebdf5848c0c3ce95cf910a919935c1b10
-  languageName: node
-  linkType: hard
-
-"chromatic@npm:^11.15.0":
-  version: 11.20.2
-  resolution: "chromatic@npm:11.20.2"
-  peerDependencies:
-    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
-    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
-  peerDependenciesMeta:
-    "@chromatic-com/cypress":
-      optional: true
-    "@chromatic-com/playwright":
-      optional: true
-  bin:
-    chroma: dist/bin.js
-    chromatic: dist/bin.js
-    chromatic-cli: dist/bin.js
-  checksum: 10c0/9f60e966fc7dc22df920649e3860493dbf7c86ea34d96e9818e4450c7572e47b8554a3ecec273881184303ee9098ca15b4c85d519b37138ee0399387b1356b7d
   languageName: node
   linkType: hard
 
@@ -4856,13 +4841,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filesize@npm:^10.0.12":
-  version: 10.1.6
-  resolution: "filesize@npm:10.1.6"
-  checksum: 10c0/9a196d64da4e947b8c0d294be09a3dfa7a634434a1fc5fb3465f1c9acc1237ea0363f245ba6e24477ea612754d942bc964d86e0e500905a72e9e0e17ae1bbdbc
-  languageName: node
-  linkType: hard
-
 "fill-range@npm:^7.1.1":
   version: 7.1.1
   resolution: "fill-range@npm:7.1.1"
@@ -6035,7 +6013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonfile@npm:^6.0.1, jsonfile@npm:^6.1.0":
+"jsonfile@npm:^6.0.1":
   version: 6.1.0
   resolution: "jsonfile@npm:6.1.0"
   dependencies:
@@ -7195,12 +7173,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "newretro@workspace:."
   dependencies:
-    "@chromatic-com/storybook": "npm:^3.2.2"
     "@eslint/js": "npm:^9.17.0"
     "@remix-run/dev": "npm:^2.15.1"
     "@remix-run/express": "npm:^2.15.1"
     "@remix-run/node": "npm:^2.15.1"
     "@remix-run/react": "npm:^2.15.1"
+    "@storybook/addon-a11y": "npm:^8.4.7"
     "@storybook/addon-essentials": "npm:^8.4.7"
     "@storybook/addon-interactions": "npm:^8.4.7"
     "@storybook/addon-onboarding": "npm:^8.4.7"
