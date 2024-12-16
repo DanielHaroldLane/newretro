@@ -17,9 +17,8 @@ export default function App() {
       </head>
       <body>
         <h1 className="text-3xl">Hello world!</h1>
-        <Button className="text-[1rem]" />
+        <Button title="derp" className="text-[1rem]" />
         <Outlet />
-
         <Scripts />
       </body>
     </html>
