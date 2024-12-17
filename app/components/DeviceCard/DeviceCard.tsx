@@ -1,7 +1,7 @@
 import { wrapped } from '~/utils'
 
-const Wrapper = wrapped('div', { className: 'lol' })
+const Wrapper = wrapped('div')
 
 export const DeviceCard = () => {
-  return <Wrapper>Wtf lol?</Wrapper>
+  return <Wrapper className="text-5xl text-slate-700">Wtf lol?</Wrapper>
 }

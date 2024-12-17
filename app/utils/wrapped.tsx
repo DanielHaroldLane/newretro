@@ -9,7 +9,10 @@ export const wrapped = <
   tagOrComponent: T,
   props?: Partial<P>
 ) => {
-  return function wrapped({ children, ...rest }: PropsWithChildren) {
+  return function Wrapped({
+    children,
+    ...rest
+  }: PropsWithChildren<Partial<P>>) {
     const Component = tagOrComponent as unknown as React.FC<P>
 
     return (
