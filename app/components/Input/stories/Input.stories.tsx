@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Input } from '../Input'
+import { HelperLevel, Input } from '../'
 
 const meta = {
   component: Input,
@@ -19,12 +19,28 @@ export const Default: Story = {
   },
 }
 
-export const WithHelperText: Story = {
+export const WithErrorHelperText: Story = {
   args: {
     name: 'firstName',
     labelText: 'First Name',
     type: 'text',
     autoComplete: 'given-name',
-    helpText: 'Help meeeeeee',
+    helperDetails: {
+      level: HelperLevel.Error,
+      text: 'Please provide your first name.',
+    },
+  },
+}
+
+export const WithInformationHelperText: Story = {
+  args: {
+    name: 'firstName',
+    labelText: 'First Name',
+    type: 'text',
+    autoComplete: 'given-name',
+    helperDetails: {
+      level: HelperLevel.Information,
+      text: 'Please provide your first name.',
+    },
   },
 }
