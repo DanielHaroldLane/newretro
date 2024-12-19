@@ -43,7 +43,7 @@ describe('Input component', () => {
 
     render(<Input {...defaultProps} helperDetails={helperDetails} />)
 
-    const helperTextElement = screen.getByText(helperDetails.text)
+    const helperTextElement = screen.getByText(helperDetails.text!)
     expect(helperTextElement).toBeInTheDocument()
     expect(helperTextElement).toHaveAttribute(
       'id',

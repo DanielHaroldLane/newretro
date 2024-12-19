@@ -1,4 +1,5 @@
 import type {
+  ChangeEvent,
   HTMLInputAutoCompleteAttribute,
   HTMLInputTypeAttribute,
 } from 'react'
@@ -20,7 +21,7 @@ export enum HelperLevel {
 }
 
 export interface HelperDetailsProps {
-  text: string
+  text?: string
   level: HelperLevel
 }
 
@@ -30,6 +31,7 @@ interface InputProps {
   labelText?: string
   autoComplete?: HTMLInputAutoCompleteAttribute
   helperDetails?: HelperDetailsProps
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 export const Input = ({
@@ -38,6 +40,7 @@ export const Input = ({
   name,
   helperDetails,
   labelText,
+  onChange,
 }: InputProps) => {
   const { level, text } = helperDetails ?? {}
   const variant = level ?? 'information'
@@ -55,6 +58,7 @@ export const Input = ({
             helperDetails?.text ? `${name}-input-helper` : undefined
           }
           aria-label={labelText}
+          onChange={onChange}
         ></input>
         {labelText && (
           <label
