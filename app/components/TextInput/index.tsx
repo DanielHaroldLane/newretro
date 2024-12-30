@@ -37,9 +37,7 @@ export const TextInput = ({
     : undefined
 
   let text: string | undefined
-  if (helper?.alwaysShow) {
-    text = isInputValid ? helper.informationText : helper.validationText
-  } else if (validationFunction && helper) {
+  if (helper?.alwaysShow || (validationFunction && helper)) {
     text = isInputValid ? helper.informationText : helper.validationText
   }
 
