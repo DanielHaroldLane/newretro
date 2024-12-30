@@ -1,4 +1,5 @@
-import { type PropsWithChildren, useState } from 'react'
+import type { ChangeEvent, PropsWithChildren } from 'react'
+import { useState } from 'react'
 import { DropdownIcon } from '~/icons'
 import { wrapped } from '~/utils'
 
@@ -16,6 +17,7 @@ interface SelectInputProps {
   name: string
   labelText?: string
   options: Array<Option>
+  onChange?: React.EventHandler<ChangeEvent<HTMLSelectElement>>
 }
 
 type LabelVariant = 'default' | 'optionSelected'
@@ -24,11 +26,13 @@ export const SelectInput = ({
   name,
   labelText,
   options,
+  onChange,
 }: PropsWithChildren<SelectInputProps>) => {
   const [labelVariant, setLabelVariant] = useState<LabelVariant>('default')
 
-  const handleOnChange = () => {
+  const handleOnChange = (event: ChangeEvent<HTMLSelectElement>) => {
     if (labelVariant === 'default') setLabelVariant('optionSelected')
+    if (onChange) onChange(event)
   }
 
   return (
