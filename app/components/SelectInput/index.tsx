@@ -15,7 +15,7 @@ type Option = {
 
 interface SelectInputProps {
   name: string
-  labelText?: string
+  labelText: string
   options: Array<Option>
   onChange?: React.EventHandler<ChangeEvent<HTMLSelectElement>>
 }
@@ -46,7 +46,7 @@ export const SelectInput = ({
           defaultValue=""
           onChange={handleOnChange}
         >
-          <option value="" disabled hidden></option>
+          <option value="" disabled hidden selected></option>
           {options.map(({ value, text }: Option) => {
             return (
               <option key={value} value={value}>
