@@ -311,7 +311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.26.0":
   version: 7.26.0
   resolution: "@babel/runtime@npm:7.26.0"
   dependencies:
@@ -2132,6 +2132,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanem/svg-injector@npm:^10.1.68":
+  version: 10.1.68
+  resolution: "@tanem/svg-injector@npm:10.1.68"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+    content-type: "npm:^1.0.5"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/ce94ccf666a2e1706c96ca174c53cd4bec34ade75b7f05f7193be73c1057062217c97a0b8afbd28d2a882c443b842742d51ee43f69f462425219589ad1f7c2f8
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:10.4.0, @testing-library/dom@npm:^10.4.0":
   version: 10.4.0
   resolution: "@testing-library/dom@npm:10.4.0"
@@ -2423,6 +2434,13 @@ __metadata:
   dependencies:
     undici-types: "npm:~6.20.0"
   checksum: 10c0/2c7b71a040f1ef5320938eca8ebc946e6905caa9bbf3d5665d9b3774a8d15ea9fab1582b849a6d28c7fc80756a62c5666bc66b69f42f4d5dafd1ccb193cdb4ac
+  languageName: node
+  linkType: hard
+
+"@types/prop-types@npm:^15.7.13":
+  version: 15.7.14
+  resolution: "@types/prop-types@npm:15.7.14"
+  checksum: 10c0/1ec775160bfab90b67a782d735952158c7e702ca4502968aa82565bd8e452c2de8601c8dfe349733073c31179116cf7340710160d3836aa8a1ef76d1532893b1
   languageName: node
   linkType: hard
 
@@ -3675,7 +3693,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"content-type@npm:~1.0.4, content-type@npm:~1.0.5":
+"content-type@npm:^1.0.5, content-type@npm:~1.0.4, content-type@npm:~1.0.5":
   version: 1.0.5
   resolution: "content-type@npm:1.0.5"
   checksum: 10c0/b76ebed15c000aee4678c3707e0860cb6abd4e680a598c0a26e17f0bfae723ec9cc2802f0ff1bc6e4d80603719010431d2231018373d4dde10f9ccff9dadf5af
@@ -7653,6 +7671,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.6.9"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-svg: "npm:^16.2.0"
     storybook: "npm:^8.4.7"
     tailwindcss: "npm:^3.4.16"
     typescript: "npm:^5.7.2"
@@ -8745,6 +8764,21 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: 10c0/b435510de78fd882bf6ca9800a73cd90cee418bd1d19efd91b8dcaebde36929bbb589e25d9f7eec24ceb84255e8d538bc1fe54e6ddb5c43c32798e2b720fa76d
+  languageName: node
+  linkType: hard
+
+"react-svg@npm:^16.2.0":
+  version: 16.2.0
+  resolution: "react-svg@npm:16.2.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.26.0"
+    "@tanem/svg-injector": "npm:^10.1.68"
+    "@types/prop-types": "npm:^15.7.13"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/a800bab91b3b228d33557532a94fb5f05e225439757e018a5653b5bb08103e01e6dbb2f4bcee5814b8efc888342d43baae7ff05d06ca878847a95a9c92249c12
   languageName: node
   linkType: hard
 
@@ -10134,7 +10168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.1":
+"tslib@npm:^2.0.1, tslib@npm:^2.6.2":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
